@@ -1,0 +1,23 @@
+<div class="container">
+    <app-page-title [pageTitle]="messages.shop.title"></app-page-title>
+    <div>{{messages.shop.totalItems}}: {{products.total}}</div>
+    <ng-container 
+        *ngFor="let product of products.products
+        | paginate: {
+            id: 'products',
+            itemsPerPage: products.limit,
+            currentPage: page,
+            totalItems: products.total
+        }">
+        <app-product-item [product]="product"></app-product-item>
+    </ng-container>
+    <div class="pagination-box text-center" *ngIf="products.products.length > 0">
+        <pagination-controls 
+            (pageChange)="loadMore($event)"
+            id="products">
+        </pagination-controls>
+    </div>
+    <ng-container *ngIf="products.products.length === 0">
+        <app-no-products></app-no-products>
+    </ng-container>
+</div>

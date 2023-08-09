@@ -1,0 +1,17 @@
+<div class="nav">
+    <span class="nav-item" routerLink="/shop/list" routerLinkActive="active">
+        {{messages.navbar.home}}
+    </span>
+    <span class="nav-item" routerLink="/shop/favourites" routerLinkActive="active">
+        {{messages.navbar.favourites}}
+        <span class="fav-count">{{total}}</span>
+    </span>
+    <span class="nav-item" routerLink="/auth" (click)="logout()">
+        {{messages.navbar.logout}}
+    </span>
+</div>
+<div class="container">
+    <div class="hi-user">
+        {{messages.navbar.greeting}} {{fullName}}!
+    </div>
+</div>

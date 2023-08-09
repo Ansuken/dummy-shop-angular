@@ -1,0 +1,35 @@
+/* cards */
+.card-box {
+    background-color: var(--light-card-bg);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    margin: 1em 0;
+    min-height: 200px;
+    .thumbnail {
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px 0px 0px 10px;
+        min-height: 200px;
+        min-width: 200px;
+    }
+    img {
+        border-radius: 10px;
+        width: 200px;
+    }
+    .card-info {
+        flex-grow: 1;
+        padding: 1em;
+        position: relative;
+    }
+    small {
+        margin: auto;
+    }
+}
+
+.favourite {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}

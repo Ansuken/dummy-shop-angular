@@ -1,0 +1,39 @@
+<div class="container-login">
+    <div class="wrap-login">
+        <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+            <div class="login-form-title">
+                {{messages.login.title}}
+            </div>
+            <div class="login-form-title">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="wrap-input">
+                <input 
+                    id="username"
+                    class="input"
+                    type="text"
+                    name="username"
+                    placeholder="{{messages.login.username}}"
+                    formControlName="username"
+                    required
+                />
+            </div>
+            <div class="wrap-input">
+                <input 
+                    id="password"
+                    class="input"
+                    type="password"
+                    name="password"
+                    placeholder="{{messages.login.password}}"
+                    formControlName="password"
+                    required
+                />
+            </div>
+            <button 
+                [disabled]="!form.valid"
+                class="btn">
+                {{messages.login.button}}
+            </button>
+        </form>
+    </div>
+</div>

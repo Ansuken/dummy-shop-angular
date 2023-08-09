@@ -1,0 +1,16 @@
+<div class="card-box">
+    <div 
+        class="thumbnail"
+        [ngStyle]="{'background-image': 'url(' + product.thumbnail + ')'}">
+    </div>
+    <div class="card-info">
+        <h2>{{product.title}}</h2>
+        <hr>
+        <span class="favourite" (click)="onFavourite(product)">
+            <i *ngIf="!isFav" class="fa-regular fa-heart"></i>
+            <i *ngIf="isFav"class="fa-solid fa-heart"></i>
+        </span>
+        <small>{{product.price|currency:'EUR'}}</small>
+        <p>{{product.description}}</p>
+    </div>
+</div>

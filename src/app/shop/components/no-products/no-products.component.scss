@@ -1,0 +1,12 @@
+.no-products {
+    border: 1px solid var(--border-color);
+    color: var(--border-color);
+    margin: 30px;
+    padding: 30px;
+    text-align: center;
+
+    .no-products-text {
+        font-size: 32px;
+        font-weight: 600;
+    }
+}

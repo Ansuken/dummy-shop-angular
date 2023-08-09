@@ -1,0 +1,38 @@
+.nav {
+    background-color: var(--nav-background);
+    display: flex;
+    overflow: hidden;
+    padding: 0.5em;
+    .nav-item {
+        color: var(--text-color-invert);
+        cursor: pointer;
+        padding: 0em 1.5em;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        &:last-child {
+            margin-left: auto;
+        }
+        &:hover, &.active {
+            color: var(--secondary-color);
+        }
+        .fav-count {
+            background-color: var(--primary-color);
+            border-radius: 25px;
+            color: var(--text-color-invert);
+            display: block;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            right: -6px;
+            top: 0px;
+            width: 25px;
+        }
+    }
+}
+.hi-user {
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    padding: 10px 0px;
+    text-align: center;
+}
